@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="script.js" defer></script> -->
+  <!-- <script src="app.js" type="module"></script> -->
+
+  <title>Adaptive Gallery</title>
+</head>
+
+<body>
+  <header id="header">
+    Adaptive Image Gallery
+  </header>
+
+  <section id="gallery">
+    <ul id="image-grid">
+      <li class="image-item">
+        <div class="image"></div>
+      </li>
+
+      <li class="image-item">
+        <div class="image"></div>
+      </li>
+
+      <li class="image-item">
+        <img src="assets/images/lake_03.webp" srcset="assets/images/768px/lake_03.jpg 768w, 
+          assets/images/1280px/lake_03.png 1280w, 
+          assets/images/lake_03.webp 1920w" sizes="(max-width: 768px) 768w,
+          (max-width: 1280px) 1280w,
+          1920w" alt="lake" class="image">
+      </li>
+
+      <li class="image-item">
+        <img src="assets/images/river_01.jpg" srcset="assets/images/768px/river_01.jpg 768w, 
+          assets/images/1280px/river_01.png 1280w, 
+          assets/images/river_01.jpg 1920w" sizes="(max-width: 768px) 768w,
+          (max-width: 1280px) 1280w,
+          1920w" alt="river" class="image">
+      </li>
+
+      <li class="image-item">
+        <picture>
+          <source srcset="assets/images/768px/river_02.jpg" media="(max-width: 768px)">
+          <source srcset="assets/images/1280px/river_02.png" media="(max-width: 1280px)">
+          <img src="assets/images/river_02.webp" alt="river" class="image">
+        </picture>
+      </li>
+
+      <li class="image-item">
+        <picture>
+          <source srcset="assets/images/768px/waterfall_01.jpg" media="(max-width: 768px)">
+          <source srcset="assets/images/1280px/waterfall_01.png" media="(max-width: 1280px)">
+          <img src="assets/images/waterfall_01.jpg" alt="waterfall" class="image">
+        </picture>
+      </li>
+
+    </ul>
+  </section>
+</body>
+
+</html>
