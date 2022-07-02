@@ -23,6 +23,24 @@ ul {
   width: 100%;
 }
 
+.image-item {
+  transition: 1s;
+}
+
+.image-item:nth-child(4) {
+  grid-column: span 3;
+}
+
+.image-item:nth-child(5) {
+  grid-column: span 2;
+}
+
+
+.image-item:hover {
+  z-index: 99;
+  transform: rotate(40deg);
+}
+
 .image-item:nth-child(1)>.image {
   background-image: url('assets/images/lake_01.jpg');
   background-size: cover;
@@ -48,6 +66,18 @@ ul {
 }
 
 @media (max-width: 1280px) {
+  ul {
+    grid-template-columns: repeat(2, auto);;
+  }
+
+  .image-item:nth-child(3n) {
+    grid-column: span 2;
+  }
+
+  .image-item:not(:nth-child(3n)) {
+    grid-column: span 1;
+  }
+
   .image-item:nth-child(1)>.image {
     background-image: url('assets/images/1280px/lake_01.png');
   }
@@ -58,10 +88,18 @@ ul {
 }
 
 @media (max-width: 768px) {
+  ul {
+    grid-template-columns: auto;;
+  }
+
+  .image-item {
+    grid-column: span 1 !important;
+  }
+
   .image-item:nth-child(1)>.image {
     background-image: url('assets/images/768px/lake_01.jpg');
   }
-  
+
   .image-item:nth-child(2)>.image {
     background-image: url('assets/images/768px/lake_02.jpg');
   }
